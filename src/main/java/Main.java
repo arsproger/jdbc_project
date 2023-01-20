@@ -5,7 +5,7 @@ public class Main {
 
         final String URL = "jdbc:postgresql://localhost:5432/it.academy";
         final String USER_NAME = "postgres";
-        final String PASSWORD = "hr";
+        final String PASSWORD = "none";
 
         Connection connection;
 
@@ -22,7 +22,7 @@ public class Main {
             SQL = "select max(age) as max_age from students";
             resultSet = statement.executeQuery(SQL);
             while (resultSet.next()) {
-                System.out.println("Получить максимальной возраст среди студентов");
+                System.out.println("Получить максимальный возраст среди студентов");
                 System.out.println(resultSet.getInt(1));
             }
 
