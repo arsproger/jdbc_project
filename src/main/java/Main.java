@@ -5,7 +5,7 @@ public class Main {
 
         final String URL = "jdbc:postgresql://localhost:5432/it.academy";
         final String USER_NAME = "postgres";
-        final String PASSWORD = "none";
+        final String PASSWORD = "null";
 
         Connection connection;
 
