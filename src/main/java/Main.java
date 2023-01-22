@@ -7,7 +7,7 @@ public class Main {
         final String USER_NAME = "postgres";
         final String PASSWORD = "null";
 
-        Connection connection;
+        Connection connection = null;
 
         try {
             connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
@@ -64,7 +64,13 @@ public class Main {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
