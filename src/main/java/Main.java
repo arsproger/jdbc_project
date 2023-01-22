@@ -64,12 +64,12 @@ public class Main {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e.getMessage());
+            System.out.println(e.getMessage());
         } finally {
             try {
                 connection.close();
             } catch (SQLException e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
             }
         }
     }
